@@ -1,21 +1,26 @@
 {
-  "name": "node_what_todo",
+  "name": "sequelizedburger",
   "version": "1.0.0",
-  "description": "-Node \r -Express \r -MySQL \r -Handlebars \r -Jquery",
+  "description": "sequelizedBurger App is an app that allows you to add a burger of your choice - \"Assign\" the burger to a customer - \"Devour\" the burger - The burgers/customers are ordered ascendingly",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vvincent157/sequelizedBurger.git"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.16.3",
-    "express-handlebars": "^3.0.0",
-    "mysql": "^2.12.0",
-    "sequelize": "^3.27.0"
+  "bugs": {
+    "url": "https://github.com/vvincent157/sequelizedBurger/issues"
   },
-  "devDependencies": {
-    "handlebars-helper-css": "^0.1.0"
+  "homepage": "https://github.com/vvincent157/sequelizedBurger#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.42.0"
   }
 }

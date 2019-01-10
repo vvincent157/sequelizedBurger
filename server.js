@@ -21,7 +21,7 @@ app.use(routes);
 //port 3000
 var PORT = process.env.PORT || 3000;
 db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
+  app.listen(PORT,'0.0.0.0', function() {
     console.log("App listening on PORT " + PORT);
   });
 });
