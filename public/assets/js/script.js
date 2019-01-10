@@ -13,7 +13,6 @@ $(document).ready(function() {
       url: "/burgers/update",
       data: burgerInfo
     }).then(function(data) {
-      // reload page to display devoured burger in proper column
       location.reload();
     });
 
