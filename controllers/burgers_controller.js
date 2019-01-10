@@ -5,13 +5,13 @@ var router = express.Router();
 var db = require("../models");
 
 
+// router.get("/", function(req, res) {
+
+//   res.redirect("/burgers");
+// });
+
+
 router.get("/", function(req, res) {
-
-  res.redirect("/burgers");
-});
-
-
-router.get("/burgers", function(req, res) {
 
   db.Burger.findAll({
     include: [db.Customer],
