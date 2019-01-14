@@ -14,7 +14,7 @@ var db = require("../models");
 router.get("/", function(req, res) {
 
   db.Burger.findAll({
-    include: [db.Customer],
+    // include: [db.Customer],
 
     order: [
       ["burger_name", "ASC"]
@@ -36,22 +36,22 @@ db.Burger.create({
 })
 
 router.put("/burgers/update",function(req, res){
-if (req.body.customer) {
-  db.Customer.create({
-    customer: req.body.customer,
-    burgerId: req.body.burgerId
-  }).then(function(dbCustomer){
-    return db.Burger.update({
-      devoured: true
-    },{
-      where: {
-      id: req.body.burgerId  
-      }
-    });
-  }).then(function(dbBurger){
-res.json("/")
-  })
-} else {
+// if (req.body.customer) {
+//   db.Customer.create({
+//     customer: req.body.customer,
+//     burgerId: req.body.burgerId
+//   }).then(function(dbCustomer){
+//     return db.Burger.update({
+//       devoured: true
+//     },{
+//       where: {
+//       id: req.body.burgerId  
+//       }
+//     });
+//   }).then(function(dbBurger){
+// res.json("/")
+//   })
+// } else {
   db.burger.update({
     devoured: true
   },{
@@ -61,6 +61,6 @@ res.json("/")
   }).then(function(dbBurger){
     res.json("/")
   })
-}
+// }
 })
 module.exports = router;
